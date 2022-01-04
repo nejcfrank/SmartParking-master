@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'smartparking-is-hub'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FA23AC4E64FF4B0D9AFA036D57A518FD }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EE301C7A1C534BE3867C254393018BED }}
           package: .
