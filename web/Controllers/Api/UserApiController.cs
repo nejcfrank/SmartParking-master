@@ -7,11 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using web.Data;
 using web.Models;
+using web.Filters;
+
 
 namespace web.Controllers_Api
 {
     [Route("api/v1/User")]
     [ApiController]
+    [ApiKeyAuth]
     public class UserApiController : ControllerBase
     {
         private readonly ParkingContext _context;
@@ -30,6 +33,7 @@ namespace web.Controllers_Api
 
         // GET: api/UserApi/5
         [HttpGet("{id}")]
+        
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _context.User.FindAsync(id);
@@ -46,6 +50,7 @@ namespace web.Controllers_Api
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
+        
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.ID)
