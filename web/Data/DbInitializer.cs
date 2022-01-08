@@ -11,6 +11,7 @@ namespace web.Data
             context.Database.EnsureCreated();
 
             // Look for any students.
+            /*
             if (context.User.Any())
             {
                 return;   // DB has been seeded
@@ -82,7 +83,7 @@ namespace web.Data
             {
                 context.Enrollments.Add(e);
             }
-            context.SaveChanges();
+            context.SaveChanges(); */
             // var roles = new IdentityRole[]
             // {
             //     new IdentityRole{Id="1", Name = "Administrator"},

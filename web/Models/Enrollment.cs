@@ -7,7 +7,8 @@ namespace web.Models
         public int UserID { get; set; }
         public int CarID { get; set; }
         public int BusID { get; set; }
-        public int SpotID{get;set;}     
+        public int SpotID{get;set;}   
+        public int SpotName{get;set;}    
         public System.DateTime Arrival {get;set;}
         public System.DateTime Departure {get;set;}
         public User User { get; set; }
